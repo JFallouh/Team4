@@ -14,5 +14,28 @@ Team 4
     Filename: Custom.CSS
 
     Purpose: This is the custom.css code.
-
 */
+
+/* ---------------------- footer ---------------------- */
+.footer .container{
+display: flex;
+justify-content: space-between;
+}
+.footer-collapse{
+    justify-content: center;
+}
+.btn-primary{
+    float:right;
+    margin: 0 8% 0 0;
+}
+.dropdown-menu li a:hover{
+    color: darkgray;
+    background-color: darkblue;
+    text-decoration: underline;
+}
+.navbar a:hover{
+    color: darkgray;
+    background-color: darkblue;
+    text-decoration: underline;
+}
+/* ---------------------------------------------------- */
