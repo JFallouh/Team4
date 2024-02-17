@@ -142,3 +142,24 @@ header{
    }
 
     /* ---------------------------------------------------- */
+        /* ------------------------- portfolio --------------------------- */
+    #portfolio-main{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 3rem;
+        margin: 3rem;
+    
+    }
+    .portfolio-grid-section img{
+        height: 300px;
+        width: 300px;
+    }
+    .portfolio-grid-section{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;    
+    }
+    .portfolio-grid-section h2{
+        font-family:  serif,'Times New Roman', Times;
+    }
