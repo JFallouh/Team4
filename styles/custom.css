@@ -38,4 +38,107 @@ justify-content: space-between;
     background-color: darkblue;
     text-decoration: underline;
 }
+
+
+
 /* ---------------------------------------------------- */
+/* ---------------------- header ---------------------- */
+header h1{
+    text-align: center;
+    font-family: serif,'Cambria', 'Cochin', Georgia, Times, 'Times New Roman';
+}
+main h3{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+main p{
+    text-align: left;
+}
+header{
+    background-image:url('../images/royalty-free/blue-background.jpg') ;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+}
+.container-fluid {
+    margin: 0 2rem 0 2rem;
+}
+    /* ---------------------------------------------------- */
+/* -----------------main------------------------------- */
+    #home-main{
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+   
+    .main-header{
+        text-align: left;
+        height: 5rem;
+        align-content: center;
+       
+        
+    }
+    .main-header h2{
+        margin: 1.5rem 0rem 1.5rem 3rem ;
+        display:inline-block;
+        font-family: serif;
+        
+    }
+    .main-header a {
+        text-decoration: none;
+        
+    }
+    .main-header h2:hover{
+    color: darkgray;
+    background-color: darkblue;
+    text-decoration: underline;
+    }
+    #blog-row,#service-row,#portfolio-row,#first-row{
+        display: flex;
+        gap:2rem;
+        justify-content: center;
+        flex-wrap: wrap;
+          
+    }
+    .home-main-service{
+        height: 300px;
+        
+        width: 300px;
+        min-width: 10px;
+        min-height: 10px;
+    }
+
+    .home-main-section{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        justify-content: center;
+        text-align: center;
+        
+    }
+    .home-main-section a:hover{
+        color: darkgray;
+    background-color: darkblue;
+    text-decoration: underline;
+    display: inline-block;
+    }
+    .home-main-image{
+        height: 400px;
+        width: 400px;
+        min-width: 10px;
+        min-height: 10px;
+    }
+   .home-main-blogim{
+    height: 500px;
+        width: 500px;
+        min-width: 10px;
+        min-height: 10px;
+   }
+   .home-main-container{
+    margin: 3rem;
+   }
+
+    /* ---------------------------------------------------- */
