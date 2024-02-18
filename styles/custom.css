@@ -163,8 +163,25 @@ header{
     .portfolio-grid-section h2{
         font-family:  serif,'Times New Roman', Times;
     }
-
+/* ------------------------- programming --------------------------- */
+   .pro-main-section{
+    display: flex;
+    flex-direction: column;
     
+}
+
+
+
+.pro-main-blogim{
+    height: 500px;
+        width: 500px;
+        min-width: 10px;
+        min-height: 10px;
+        padding:2%;      
+}
+
+
+/* ---------------------------------------------------- */
     /* ------------------------- Contact US --------------------------- */
     #Contact-main{
         display: flex;
