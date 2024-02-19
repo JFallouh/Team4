@@ -28,3 +28,32 @@ body {
 }
   
 */
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 10px; 
+    margin: 10px; 
+  
+    .grid-item {
+      background-color: #00bfff; 
+      border: 2px solid #0000ff; 
+      height: 100px; 
+    }
+  
+
+    .item-wide {
+      grid-column: span 2; 
+    }
+  
+    .item-tall {
+      grid-row: span 2; 
+    }
+  
+    .item-big {
+      grid-column: span 2;
+      grid-row: span 2; 
+    }
+  }
+  
