@@ -225,11 +225,9 @@ header{
     border-radius: 10px;
 }
 
-#Servicescol h1, p {
-margin-left: 10rem;
-
+.Service-main-container{
+margin-left: 5rem;
 }
-
 
 
 #ourservice-row{
