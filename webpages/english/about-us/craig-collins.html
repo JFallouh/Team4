@@ -24,17 +24,18 @@ Team 4
   <meta name="description" content="about us page for Awesome Code Crafters Hub">
   <meta name="author" content="Team 4, Craig Collins, James Fallouh, SeyedehFatemeh Fekribaygi">
   <meta name="keywords" content="Craig Collins, personal bio">
+
   <!-- Favicon -->
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-  <!-- Custom CSS -->
+  <!-- CSS -->
   <link rel="stylesheet" href="../../../styles/custom.css">
-
-  <!-- Custom SCSS -->
   <link rel="stylesheet" href="../../../styles/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 
   <title lang="en">Craig Collins</title>
   <!--<title lang="en">Bootstrap Template</title>-->
@@ -43,204 +44,193 @@ Team 4
 </head>
 
 <body>
+ <!-- Bootstrap header / Navigation bar -->
+ <nav class="navbar navbar-expand-lg bg-primary bg-gradient text-white">
+  <div class="container-fluid ">
+    <img class="navbar-brand " alt="Awesome code crafter logo" src="../../../Vista-Logos-Blue/logo-png.png" height="50"
+      width="50">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-  <!-- bootstrap header / navigation bar -->
-  <nav class="navbar navbar-expand-lg bg-primary bg-gradient text-white">
-    <div class="container-fluid ">
-      <img class="navbar-brand " alt="Awesome code crafter logo" src="../../../Vista Logos Blue/logo-png.png" height="5%"
-        width="5%">
-      <!--  <a class="navbar-brand" href="#">Navbar</a>   -->
-      
-        <!--<button class="btn  btn-secondary " type="submit">Search</button>-->
+        <!-- Home Page -->
+        <li class="nav-item ">
+          <a class="nav-link active text-white" aria-current="page" href="../../../index-en.html">Home</a>
+        </li>
+
+        <!-- Service Page-->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="../services/services.html" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Services
+          </a>
+          <ul class="dropdown-menu bg-primary bg-gradient text-white">
+            <li><a class="dropdown-item text-white" href="../services/programming.html">Programming</a>
+            </li>
+            <li><a class="dropdown-item text-white" href="../services/web-development.html">Web
+                Development</a></li>
+            <li><a class="dropdown-item text-white" href="../services/databases.html">Databases</a></li>
+            <li><a class="dropdown-item text-white" href="../services/website-design.html">Website
+                Design</a></li>
+          </ul>
+        </li>
+
+        <!-- Portfolio-->
+        <li class="nav-item">
+          <a class="nav-link active text-white" aria-current="page" href="../portfolio.html">Portfolio</a>
+        </li>
+
+        <!-- Blog -->
+        <li class="nav-item">
+          <a class="nav-link active text-white" aria-current="page" href="../blog.html">Blog</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="about-us.html" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            About Us
+          </a>
+          <ul class="dropdown-menu bg-primary bg-gradient ">
+            <li><a class="dropdown-item text-white" href="craig-collins.html">Craig
+                Collins</a></li>
+            <li><a class="dropdown-item text-white" href="james-fallouh.html">James
+                Fallouh</a></li>
+            <li><a class="dropdown-item text-white" href="fatemeh-fekribaygi.html">SeyedehFatemeh Fekribaygi</a></li>
+          </ul>
+        </li>
+
+        <!-- Contact Us -->
+        <li class="nav-item">
+          <a class="nav-link active text-white" aria-current="page" href="../contact-us.html">Contact
+            Us</a>
+        </li>
+
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <a href="../../francais/a-propos/a-propos.html" class="text-white">Français</a>
       </form>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <!-- HOME PAGE -->
-          <li class="nav-item ">
-            <a class="nav-link active text-white" aria-current="page" href="../../../index-en.html">Home</a>
-          </li>
-
-          <!-- Service Page-->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white" href="../services/services.html" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              Services
-            </a>
-            <ul class="dropdown-menu bg-primary bg-gradient text-white">
-              <li><a class="dropdown-item text-white" href="../services/programming.html">Programming</a>
-              </li>
-              <li><a class="dropdown-item text-white" href="../services/web-development.html">Web
-                  Development</a></li>
-              <!-- <li><hr class="dropdown-divider"></li>-->
-              <li><a class="dropdown-item text-white" href="../services/databases.html">Databases</a></li>
-              <li><a class="dropdown-item text-white" href="../services/website-design.html">Website
-                  Design</a></li>
-            </ul>
-          </li>
-          <!-- portfolio-->
-          <li class="nav-item">
-            <a class="nav-link active text-white" aria-current="page"
-              href="../portfolio.html">Portfolio</a>
-          </li>
-          <!--Blog-->
-          <li class="nav-item">
-            <a class="nav-link active text-white" aria-current="page" href="../blog.html">Blog</a>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white" href="about-us.html" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              About Us
-            </a>
-            <ul class="dropdown-menu bg-primary bg-gradient ">
-              <li><a class="dropdown-item text-white" href="craig-collins.html">Craig
-                  Collins</a></li>
-              <li><a class="dropdown-item text-white" href="james-fallouh.html">James
-                  Fallouh</a></li>
-              <!-- <li><hr class="dropdown-divider"></li> -->
-              <li><a class="dropdown-item text-white"
-                  href="fatemeh-fekribaygi.html">SeyedehFatemeh Fekribaygi</a></li>
-            </ul>
-          </li>
-          <!--Contact Us-->
-          <li class="nav-item">
-            <a class="nav-link active text-white" aria-current="page" href="../contact-us.html">Contact
-              Us</a>
-          </li>
-
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <a href="../../francais/a-propos/craig-collins.html" class="text-white">Français</a>
-          </form>
-        </div>
     </div>
-  </nav>
-  <!-- navbar links -->
+  </div>
+</nav>
 
-  <!-- bootstrap jumbotron -->
+  <!-- Bootstrap Jumbotron -->
 
-  <!-- header and hero image -->
+  <!-- Header and Hero Image -->
   <header class="visually-hidden">
-    <h1 class="text-white">Craig Collins</h1>
+    <h1 class="text-white">Craig Collins - Biography</h1>
   </header>
-  <!-- main-->
+
+  <!-- Main -->
  
-<!-- About Us Content -->
-<div class="d-flex justify-content-center">
-  <div class="col-md-9 mb-4 p-3">
+<!-- About Person Content -->
+
+<!-- Desktop Appearance -->
+<div class="d-none d-md-flex justify-content-center" style="background-color: #D3D3D3; padding: 20px;">
+  <div class="col-md-9 mb-4 p-3" style="border: 2px solid #dee2e6; border-radius: 20px; background-color: #fff; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);">
     <div class="d-md-flex flex-md-row flex-column justify-content-between align-items-start">
-      <img src="../../../images/generated/fake-craig.png" alt="image of Craig" class="card-img-top" width="400" height="400" style="padding: 20px; border-radius: 60px;" title="Craig Collins">
-      <div>
-        <div class="article-section">
-          <h2 style="color: blue; font-family: serif; margin-bottom: 50px;">Craig Collins</h2>
-          <p style="font-family: sans-serif; margin: 0; margin-left: 40px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt, arcu in vulputate aliquam, dolor ex euismod dui, vel fermentum urna ligula rutrum neque. Integer tempor scelerisque tristique. Nunc pharetra libero a ligula interdum faucibus. Quisque vel auctor tortor. Etiam mattis massa a vulputate placerat. Etiam id scelerisque felis. Aenean accumsan ac lacus ut eleifend. Praesent et congue quam. Nunc porta quis arcu ut venenatis. Proin consequat felis maximus semper iaculis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt, arcu in vulputate aliquam, dolor ex euismod dui, vel fermentum urna ligula rutrum neque. Integer tempor scelerisque tristique. Nunc pharetra libero a ligula interdum faucibus. Quisque vel auctor tortor. Etiam mattis massa a vulputate placerat. Etiam id scelerisque felis. Aenean accumsan ac lacus ut eleifend. Praesent et congue quam. Nunc porta quis arcu ut venenatis. Proin consequat felis maximus semper iaculis.</p>
-          <!-- Buttons -->
-          <div class="text-center mt-4">
-            <a href="https://www.linkedin.com/in/craigmichaelcollins/" class="btn btn-primary mr-2" target="_blank">LinkedIn</a>
-            <a href="mailto:traductionscollins@gmail.com" class="btn btn-primary">Email</a>
-          </div>
-        </div>
+      <img src="../../../images/generated/craig.png" alt="image of Craig" class="rounded mr-md-3 mb-md-0 mb-3 p-md-4" style="width: 500px; height: 500px; border-radius: 20px;" title="Craig Collins">
+      <div class="article-section" style="padding: 20px;">
+        <h2 style="color: #007bff; font-family: serif; margin-bottom: 20px; text-align: center; font-size: 60px; font-weight: bold;">
+          Craig Collins
+        </h2>
+        <p style="font-family: sans-serif; margin: 0; font-size: 30px; line-height: 1.6; color: #495057;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt, arcu in vulputate aliquam, dolor ex euismod dui, vel fermentum urna ligula rutrum neque. Integer tempor scelerisque tristique. Nunc pharetra libero a ligula interdum faucibus. Quisque vel auctor tortor. Etiam mattis massa a vulputate placerat. Etiam id scelerisque felis. Aenean accumsan ac lacus ut eleifend. Praesent et congue quam. Nunc porta quis arcu ut venenatis. Proin consequat felis maximus semper iaculis.</p>
       </div>
     </div>
   </div>
 </div>
 
-
- <!-- Main Header -->
- <section class="main-header bg-primary bg-gradient">
-  <h2 class="text-white">Skills</h2>
-</section>
-
-
-<!-- cards -->
-<div class="container-fluid" style="margin: 0;">
-  <div class="row justify-content-center" style="background-color: lightgrey;">
-    <div class="col-md-4 mb-4">
-      <div class="card" style="padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 20px 0;">
-        <img src="../../../images/generated/web-dev.png" alt="image of web developer looking at code" class="card-img-top rounded-circle" width="400" height="600" style="padding: 20px;">
-        <div class="card-body">
-          <h2 class="card-title text-center" style="color: blue !important; font-family: serif !important; margin: 0 !important;">Reliable</h2>
-          <div class="text-center mt-3" style="margin-top: 1rem !important;">
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="col-md-4 mb-4">
-      <div class="card" style="padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 20px 0;">
-        <img src="../../../images/generated/multitasking.png" alt="image of man multitasking on multiple screens with multiple arms" class="card-img-top rounded-circle" width="400" height="600" style="padding: 20px;">
-        <div class="card-body">
-          <h2 class="card-title text-center" style="color: blue !important; font-family: serif !important; margin: 0 !important;">Efficient</h2>
-          <div class="text-center mt-3" style="margin-top: 1rem !important;">
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="col-md-4 mb-4">
-      <div class="card" style="padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 20px 0;">
-        <img src="../../../images/generated/hologram.png" alt="image of someone using multiple holographic screens" class="card-img-top rounded-circle" width="400" height="600" style="padding: 20px;">
-        <div class="card-body">
-          <h2 class="card-title text-center" style="color: blue !important; font-family: serif !important; margin: 0 !important;">Skilled</h2>
-          <div class="text-center mt-3" style="margin-top: 1rem !important;">
-          </div>
-        </div>
+<!-- Mobile Appearance -->
+<div class="d-md-none justify-content-center" style="background-color: #D3D3D3; padding: 20px;">
+  <div class="col-md-9 mb-4 p-3" style="border: 2px solid #dee2e6; border-radius: 20px; background-color: #fff; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);">
+    <img src="../../../images/generated/craig.png" alt="image of Craig" class="rounded mx-auto d-block mb-4" style="max-width: 100%; height: auto; border-radius: 20px;" title="Craig Collins">
+    <div class="article-section" style="padding: 20px;">
+      <h2 style="color: #007bff; font-family: serif; margin-bottom: 20px; text-align: center; font-size: 40px; font-weight: bold;">
+        Craig Collins
+      </h2>
+      <p style="font-family: sans-serif; margin: 0; font-size: 20px; line-height: 1.6; color: #495057;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt, arcu in vulputate aliquam, dolor ex euismod dui, vel fermentum urna ligula rutrum neque. Integer tempor scelerisque tristique. Nunc pharetra libero a ligula interdum faucibus. Quisque vel auctor tortor. Etiam mattis massa a vulputate placerat. Etiam id scelerisque felis. Aenean accumsan ac lacus ut eleifend. Praesent et congue quam. Nunc porta quis arcu ut venenatis. Proin consequat felis maximus semper iaculis.</p>
       </div>
     </div>
   </div>
-</div>
 
+
+
+
+<!-- Main Header -->
 <section class="main-header bg-primary bg-gradient">
   <h2 class="text-white">Curriculum Vitae</h2>
 </section>
 
-
+<!-- Curriculum Vitae Section-->
 <div class="container mt-5">
   <div class="row justify-content-center">
+
+    <!-- Left Curriculum Vitae Column -->
     <div class="col-md-8">
       <div class="card">
         <div class="card-body">
-          <h2 class="card-title text-center mt-4 mb-4" style="margin-left: initial !important;">Craig Collins</h2>
-          <p class="card-text" style="margin-left: initial !important; text-indent: 50px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt, arcu in vulputate aliquam, dolor ex euismod dui, vel fermentum urna ligula rutrum neque. Integer tempor scelerisque tristique. Nunc pharetra libero a ligula interdum faucibus. Quisque vel auctor tortor. Etiam mattis massa a vulputate placerat. Etiam id scelerisque felis. Aenean accumsan ac lacus ut eleifend.</p>
-          
-          <div class="cv-section mt-4 mb-4" style="margin-left: initial !important;">
-            <h3>Professional Summary:</h3>
-            <p class="mt-4" style="margin-left: initial !important; text-indent: 50px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt, arcu in vulputate aliquam, dolor ex euismod dui, vel fermentum urna ligula rutrum neque. Integer tempor scelerisque tristique. Nunc pharetra libero a ligula interdum faucibus. Quisque vel auctor tortor. Etiam mattis massa a vulputate placerat. Etiam id scelerisque felis. Aenean accumsan ac lacus ut eleifend.</p>
+          <h2 id="craig-collins-heading" class="card-title text-center mt-4 mb-4 text-primary">Craig Collins</h2>
+          <p class="card-text" style="text-indent: 50px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt, arcu in vulputate aliquam, dolor ex euismod dui, vel fermentum urna ligula rutrum neque. Integer tempor scelerisque tristique. Nunc pharetra libero a ligula interdum faucibus. Quisque vel auctor tortor. Etiam mattis massa a vulputate placerat. Etiam id scelerisque felis. Aenean accumsan ac lacus ut eleifend.</p>
+          <div class="cv-section mt-4 mb-4">
+            <h3 class="text-primary">Professional Summary</h3>
+            <p class="mt-4" style="text-indent: 50px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt, arcu in vulputate aliquam, dolor ex euismod dui, vel fermentum urna ligula rutrum neque. Integer tempor scelerisque tristique. Nunc pharetra libero a ligula interdum faucibus. Quisque vel auctor tortor. Etiam mattis massa a vulputate placerat. Etiam id scelerisque felis. Aenean accumsan ac lacus ut eleifend.</p>
           </div>
-
-          <div class="cv-section" style="margin-left: initial !important;">
-            <h3>Skills:</h3>
-            <ol style="margin-left: initial !important;">
+          <div class="cv-section">
+            <h3 class="text-primary">Skills</h3>
+            <ul class="list-unstyled">
               <li>Languages: HTML5, CSS3, SQL, MySQL</li>
-              <li>Frameworks: Bootstrap,</li>
+              <li>Frameworks: Bootstrap</li>
               <li>Database Management: MySQL, MS SQL</li>
               <li>Version Control: Git</li>
-            </ol>
+            </ul>
           </div>
-          
-          <div class="cv-section" style="margin-left: initial !important;">
-            <h3 class="mb-4">Experience:</h3>
-            <p style="margin-left: initial !important;">Full Stack Developer</p>
-            <p style="margin-left: initial !important;">AEC Full Stack Developer Program</p>
-            <p style="margin-left: initial !important;">4 Months</p>        
-            <ul style="margin-left: initial !important;">
+          <div class="cv-section">
+            <h3 class="mb-4 text-primary">Experience</h3>
+            <p>Full Stack Developer</p>
+            <p>AEC Full Stack Developer Program</p>
+            <p>4 Months</p>        
+            <ul>
               <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
               <li>Praesent tincidunt, arcu in vulputate aliquam.</li>
               <li>Etiam mattis massa a vulputate placerat. </li>
             </ul>
           </div>
-          
-          <!-- Buttons -->
-          <div class="text-center">
-            <a href="https://www.linkedin.com/in/craigmichaelcollins/" class="btn btn-primary mr-2" target="_blank" style="float: none !important; margin: 0;">LinkedIn</a>
-            <a href="mailto:traductionscollins@gmail.com" class="btn btn-primary" style="float: none !important; margin: 0;">Email</a>
-          </div>          
-          
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Cards Column -->
+    <div class="col-md-4">
+
+      <!-- LinkedIn Card -->
+      <div class="card mb-4 mt-4">
+        <img src="../../../images/generated/linked-in-handshake.png" alt="image of two people shaking hands at a LinkedIn meetup" class="card-img-top rounded-circle" style="padding: 20px;" title="LinkedIn Meetup Handshake">
+        <div class="card-body">
+
+          <!-- LinkedIn Button -->
+          <div class="text-center mt-4">
+            <a href="https://www.linkedin.com/in/craigmichaelcollins/" class="btn btn-primary mr-2" style="float: none !important; margin: 0 !important;">
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Email Card Column -->
+      <div class="card">
+        <img src="../../../images/generated/email-sent.png" alt="image of an email being sent on a touchscreen" class="card-img-top rounded-circle" style="padding: 20px;" title="Touchscreen Email Sent Confirmation">
+        <div class="card-body">
+
+            <!-- Email Button -->
+            <div class="text-center mt-4">
+              <a href="mailto:traductionscollins@gmail.com" class="btn btn-primary" style="float: none !important; margin: 0 !important;">
+                <i class="far fa-envelope"></i> Email
+              </a>
+            </div>
         </div>
       </div>
     </div>
@@ -248,56 +238,50 @@ Team 4
 </div>
 
 
-
-
-
-
-  <!-- footer -->
-  <div class="footer jumbotron jumbotron-fluid text-center  p-2">
-
-    <nav class="navbar navbar-expand-lg bg-primary bg-gradient text-white">
+<!-- Footer -->
+<footer class="footer bg-primary py-4 mt-5">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
           aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="footer-collapse collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link active text-white" aria-current="page" href="../../../index-en.html">Home</a>
-            <a class="nav-link text-white" href="../services/services.html">Services</a>
-            <a class="nav-link text-white" href="../portfolio.html">Portfolio</a>
-            <a class="nav-link text-white" href="../blog.html">Blog</a>
-            <a class="nav-link text-white" href="#">Job Listings</a>
-            <a class="nav-link text-white" href="../faq.html">FAQ</a>
-            <a class="nav-link text-white" href="about-us.html">About Us</a>
-
-
+            <a class="nav-link active" aria-current="page" href="../../../index-en.html">Home</a>
+            <a class="nav-link" href="../services/services.html">Services</a>
+            <a class="nav-link" href="../portfolio.html">Portfolio</a>
+            <a class="nav-link" href="../blog.html">Blog</a>
+            <a class="nav-link" href="about-us.html">About Us</a>
           </div>
         </div>
       </div>
     </nav>
-    <!-- ----------------------------------- -->
-    <div class="container ">
-      <section>
-        <p>&copy; 2024 Awesome Code Crafter Hub. All rights reserved. </p>
-      </section>
-      <section>
-        <a href="https://www.facebook.com/" target="_blank"><img src="../../../images/facebook.svg"
-            alt="black and white Facebook logo" class="pr-4">&nbsp;</a>
-        <a href="https://www.linkedin.com/" target="_blank"><img src="../../../images/linkedin.svg"
-            alt="black and white Facebook logo" class="pr-4">&nbsp;</a>
-        <a href="https://instagram.com/" target="_blank"><img src="../../../images/instagram.svg"
-            alt="black and white Twitter logo" class="pr-4">&nbsp;</a>
-        <a href="https://twitter.com/" target="_blank"><img src="../../../images/twitter-x.svg"
-            alt="black and white Twitter logo" class="pr-4">&nbsp;</a>
-      </section>
+
+    <div class="row justify-content-center mt-3">
+      <div class="col-md-auto">
+        <a href="https://www.facebook.com/" target="_blank" class="text-white me-2"><img src="../../../images/facebook.svg"
+            alt="Facebook logo" class="social-icon"></a>
+        <a href="https://www.linkedin.com/" target="_blank" class="text-white me-2"><img src="../../../images/linkedin.svg"
+            alt="LinkedIn logo" class="social-icon"></a>
+        <a href="https://instagram.com/" target="_blank" class="text-white me-2"><img src="../../../images/instagram.svg"
+            alt="Instagram logo" class="social-icon"></a>
+        <a href="https://twitter.com/" target="_blank" class="text-white me-2"><img src="../../../images/twitter-x.svg"
+            alt="Twitter logo" class="social-icon"></a>
+      </div>
     </div>
-    <button type="button" class="btn btn-primary">Contact Us</button>
+
+    <div class="row justify-content-center mt-3">
+      <div class="col-md-auto text-white text-center">
+        <p>&copy; 2024 Awesome Code Crafter Hub. All rights reserved.</p>
+      </div>
+    </div>
   </div>
+</footer>
 
 
-  <!-- optional javascript -->
+  <!-- Optional Javascript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
