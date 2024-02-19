@@ -55,14 +55,7 @@ main h3{
 main p {
     text-align: left;
 }
-header{
-    background-image:url('../images/royalty-free/blue-background.jpg') ;
-    height: 10rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin:0;
-}
+
 .container-fluid {
     margin: 0 2rem 0 2rem;
 }
