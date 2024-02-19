@@ -298,6 +298,36 @@ margin-left: 5rem;
 .table-experties tr:nth-child(2){
     border-bottom: 1px dashed grey;
 }
+/* ---------------------------------------------------- */
+/* ------------------Web development----------------------------- */
+.table-webdevelopment{
+    margin: 0 auto;
+    font-size: xx-large;
+    width: 60%;
+    height: 100%;
+    text-align: left;
+    margin-bottom: 5rem;
+}
 
+.table-webdevelopment td{
+    text-align: center;
+    padding: 2rem;
+}
+
+.table-webdevelopment tr:first-child{
+    border-bottom: 2px dashed grey;
+}
+
+.table-webdevelopment td:first-child{
+    border-right: 2px dashed grey;
+}
+.webdevelopment-table-title{
+    margin: 3rem auto;
+    font-family: serif;
+}
+
+.web-btn-container{
+    margin-top: 3rem;
+}
 
 
