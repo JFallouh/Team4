@@ -21,7 +21,9 @@ Team 4
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="bootstrap template">
-
+  <meta name="author" content="Team 4, Craig Collins, James Fallouh, SeyedehFatemeh Fekribaygi">
+  <meta name="keywords" content="coding, web development, programming, web design, blog">
+ 
   <!-- Favicon -->
 
   <!-- Bootstrap CSS -->
@@ -34,6 +36,13 @@ Team 4
   <!-- Custom SCSS -->
   <link rel="stylesheet" href="styles/custom.css">
 
+  <!-- this expands the dropdown on hover for both services and about us -->
+  <style>
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+    }
+  </style> 
+  
   <title lang="en">Home </title>
   <!--<title lang="en">Bootstrap Template</title>-->
 
@@ -63,7 +72,7 @@ Team 4
           </li>
 
           <!-- Service Page-->
-          <li class="nav-item dropdown">
+          <li class="nav-item services-dropdown">
             <a class="nav-link dropdown-toggle text-white" href="webpages/english/services/services.html" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">
               Services
@@ -89,7 +98,7 @@ Team 4
             <a class="nav-link active text-white" aria-current="page" href="webpages/english/blog.html">Blog</a>
           </li>
 
-          <li class="nav-item dropdown">
+          <li class="nav-item about-us-dropdown">
             <a class="nav-link dropdown-toggle text-white" href="webpages/english/about-us/about-us.html" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">
               About Us
@@ -334,6 +343,26 @@ Team 4
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
-</body>
+ <!-- this snippet enables the user to select the first dropdown item as a link -->
+    <!-- for services -->
+    <script>
+      var servicesLink = document.querySelector('.nav-item.services-dropdown .dropdown-toggle'); /* selects the nav-link anchor element in the dropdown menu */
+      servicesLink.addEventListener('click', function(event) { /* listens for the user to click */
+          event.preventDefault(); /* prevents the dropdown from expanding */
+          window.location.href = "services/services.html"; /* redirects to services pages */
+      });
+    </script>
+ 
+    <!-- for about us -->
+    <script>
+      var aboutUsLink = document.querySelector('.nav-item.about-us-dropdown .dropdown-toggle');
+      aboutUsLink.addEventListener('click', function(event) {
+          event.preventDefault();
+          window.location.href = "about-us/about-us.html";
+      });
+    </script>
+
+
+  </body>
 
 </html>

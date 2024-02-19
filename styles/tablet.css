@@ -1,0 +1,35 @@
+﻿/* tablet.css */
+
+#container {
+    width: 100%;
+    /* background-image: url("../../images/nature_tablet.jpg");*/
+    background-size: contain;
+    background-color: aqua;
+}
+
+#header h1 {
+    font-size:18px;
+    margin-bottom:0;
+    padding-top:10px;
+    padding-left:0;
+    text-align:center;
+}
+
+#nav ul {
+    width:660px;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+#nav ul li a {
+    width:120px;
+    padding:10px 5px;
+    font-size:15px;
+}
+
+
+
+
+
+
+
