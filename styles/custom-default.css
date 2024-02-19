@@ -65,13 +65,15 @@ main p {
         display: flex;
         flex-direction: column;
         gap: 2em;
-        background-color: rgb(220, 211, 211)a(255, 0, 0, 0);
-        animation: over-and-back 10s linear 1003;
+        
+    }
+    body{
+        background-color: rgb(251, 248, 248);
+        animation: over-and-back 10s alternate 1003;
         animation-delay: 2s;
     }
-
     @keyframes over-and-back {
-        0.5% { background-color: rgb(220, 245, 245); }
+        0.1% { background-color: rgb(211, 211, 211); }
         /*50% { background-color: rgb(127, 127, 158); }*/
         /*100% { background-color: rgb(139, 119, 122); }*/
 
