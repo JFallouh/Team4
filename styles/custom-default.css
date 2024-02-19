@@ -72,6 +72,7 @@ header{
         display: flex;
         flex-direction: column;
         gap: 2em;
+        
     }
    
     .main-header{
@@ -143,22 +144,26 @@ header{
 
     /* ---------------------------------------------------- */
         /* ------------------------- portfolio --------------------------- */
-    #portfolio-main{
+    /*#portfolio-main{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         gap: 3rem;
         margin: 3rem;
     
-    }
+    }*/
+   
     .portfolio-grid-section img{
-        height: 300px;
-        width: 300px;
+        max-height: 300px;
+        max-width : 300px;
+    
     }
+    
     .portfolio-grid-section{
-        display: flex;
+        text-align: left;
+       /* display: flex;
         flex-direction: column;
-        flex-wrap: wrap;    
+        flex-wrap: wrap;*/    
     }
     .portfolio-grid-section h2{
         font-family:  serif,'Times New Roman', Times;
@@ -167,17 +172,21 @@ header{
    .pro-main-section{
     display: flex;
     flex-direction: column;
+    margin: 1rem; 
     
+}
+.pro-first-sec{
+    display: block;
+    float: left;
 }
 
 
-
-.pro-main-blogim{
-    height: 500px;
-        width: 500px;
-        min-width: 10px;
-        min-height: 10px;
-        padding:2%;      
+.prog-main img{
+    max-height: 500px;
+    max-width: 500px;
+        min-width: 300px;
+        min-height: 300px;
+        padding:1rem;     
 }
 
 

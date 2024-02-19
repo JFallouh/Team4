@@ -1,33 +1,20 @@
 ﻿/* tablet.css */
 
-#container {
-    width: 100%;
-    /* background-image: url("../../images/nature_tablet.jpg");*/
-    background-size: contain;
-    background-color: aqua;
-}
 
-#header h1 {
-    font-size:18px;
-    margin-bottom:0;
-    padding-top:10px;
-    padding-left:0;
-    text-align:center;
-}
+/*  Class: WEBSITE DESIGN - 420-WB4-AB
+    Assignment: Final Project
+    Team 4
+      Craig Collins (1038789)
+      James Fallouh (6171620)
+      SeyedehFatemeh Fekribaygi (6284424)
 
-#nav ul {
-    width:660px;
-    margin-right:auto;
-    margin-left:auto;
-}
-
-#nav ul li a {
-    width:120px;
-    padding:10px 5px;
-    font-size:15px;
-}
-
-
+    Current Date: 2024-02-20
+     */
+     .table-images,.home-main-service,.home-main-image,.Service-main-image,.home-main-blogim{
+        height: 375px;
+        width: 375px;
+    }
+    
 
 
 
