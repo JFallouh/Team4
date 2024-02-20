@@ -30,30 +30,83 @@ body {
 */
 
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    grid-gap: 10px; 
-    margin: 10px; 
-  
-    .grid-item {
-      background-color: #00bfff; 
-      border: 2px solid #0000ff; 
-      height: 100px; 
-    }
-  
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+}
 
-    .item-wide {
-      grid-column: span 2; 
-    }
-  
-    .item-tall {
-      grid-row: span 2; 
-    }
-  
-    .item-big {
-      grid-column: span 2;
-      grid-row: span 2; 
-    }
+.container .article {
+  flex: 0 0 calc(33.33% - 20px);
+  max-width: calc(33.33% - 20px);
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.container .article .content {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container .article .content a {
+  text-decoration: none;
+}
+
+.container .article .content a img {
+  width: 100%;
+  height: auto;
+}
+
+.container .article .content .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #1F79FD;
+  border: 1px solid black;
+}
+
+.container .article .content .overlay h2 {
+  color: white;
+  font-family: serif;
+  margin: 0;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: bold;
+  background-color: #1F79FD;
+  line-height: 1;
+  padding: 5px;
+}
+
+.container .article:nth-child(odd) {
+  background-color: transparent;
+}
+
+.container .article:nth-child(odd) .content .overlay {
+  background-color: transparent;
+}
+
+.container .article:nth-child(even) {
+  background-color: lightgrey;
+}
+
+.container .article:nth-child(even) .content .overlay {
+  background-color: #1F79FD;
+}
+
+@media only screen and (max-width: 768px) {
+  .container .article {
+    flex: 0 0 calc(50% - 20px);
+    max-width: calc(50% - 20px);
   }
-  
+}
+
+@media only screen and (max-width: 480px) {
+  .container .article {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
