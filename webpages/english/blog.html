@@ -30,8 +30,8 @@ Team 4
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="../../../styles/custom.css">
-  <link rel="stylesheet" href="../../../styles/main.css">
+  <link rel="stylesheet" href="../../styles/custom.css">
+  <link rel="stylesheet" href="../../styles/main.css">
 
   <title lang="en">Awesome Code Crafters Hub - Blog </title>
   
@@ -39,59 +39,81 @@ Team 4
 
 <body>
 
-  <!-- Bootstrap Header / Navigation Bar -->
+
+  <!-- bootstrap header / navigation bar -->
   <nav class="navbar navbar-expand-lg bg-primary bg-gradient text-white">
     <div class="container-fluid ">
-      <img class="navbar-brand " alt="Awesome code crafter logo" src="../../../Vista-Logos-Blue/logo-png.png" height="50"
-        width="50">
+      <img class="navbar-brand " alt="Awesome code crafter logo" src="../../Vista Logos Blue/logo-png.png" height="5%"
+        width="5%">
+      <!--  <a class="navbar-brand" href="#">Navbar</a>   -->
+      
+        <!--<button class="btn  btn-secondary " type="submit">Search</button>-->
+      </form>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <!-- Navbar links -->
+          <!-- HOME PAGE -->
           <li class="nav-item ">
-            <a class="nav-link active text-white" aria-current="page" href="../../../index-en.html">Home</a>
+            <a class="nav-link active text-white" aria-current="page" href="../../index-en.html">Home</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white" href="../services/services.html" role="button"
+
+          <!-- Service Page-->
+          <li class="nav-item services-dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="services/services.html" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">
               Services
             </a>
             <ul class="dropdown-menu bg-primary bg-gradient text-white">
-              <li><a class="dropdown-item text-white" href="../services/programming.html">Programming</a></li>
-              <li><a class="dropdown-item text-white" href="../services/web-development.html">Web Development</a></li>
-              <li><a class="dropdown-item text-white" href="../services/databases.html">Databases</a></li>
-              <li><a class="dropdown-item text-white" href="../services/website-design.html">Website Design</a></li>
+              <li><a class="dropdown-item text-white" href="services/programming.html">Programming</a>
+              </li>
+              <li><a class="dropdown-item text-white" href="services/web-development.html">Web
+                  Development</a></li>
+              <!-- <li><hr class="dropdown-divider"></li>-->
+              <li><a class="dropdown-item text-white" href="services/databases.html">Databases</a></li>
+              <li><a class="dropdown-item text-white" href="services/website-design.html">Website
+                  Design</a></li>
             </ul>
           </li>
+          <!-- portfolio-->
           <li class="nav-item">
-            <a class="nav-link active text-white" aria-current="page" href="../portfolio.html">Portfolio</a>
+            <a class="nav-link active text-white" aria-current="page"
+              href="portfolio.html">Portfolio</a>
           </li>
+          <!--Blog-->
           <li class="nav-item">
-            <a class="nav-link active text-white" aria-current="page" href="../blog.html">Blog</a>
+            <a class="nav-link active text-white" aria-current="page" href="blog.html">Blog</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white" href="about-us.html" role="button"
+
+          <li class="nav-item about-us-dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="about-us/about-us.html" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">
               About Us
             </a>
             <ul class="dropdown-menu bg-primary bg-gradient ">
-              <li><a class="dropdown-item text-white" href="craig-collins.html">Craig Collins</a></li>
-              <li><a class="dropdown-item text-white" href="james-fallouh.html">James Fallouh</a></li>
-              <li><a class="dropdown-item text-white" href="fatemeh-fekribaygi.html">SeyedehFatemeh Fekribaygi</a></li>
+              <li><a class="dropdown-item text-white" href="about-us/craig-collins.html">Craig
+                  Collins</a></li>
+              <li><a class="dropdown-item text-white" href="about-us/james-fallouh.html">James
+                  Fallouh</a></li>
+              <!-- <li><hr class="dropdown-divider"></li> -->
+              <li><a class="dropdown-item text-white"
+                  href="about-us/fatemeh-fekribaygi.html">SeyedehFatemeh Fekribaygi</a></li>
             </ul>
           </li>
+          <!--Contact Us-->
           <li class="nav-item">
-            <a class="nav-link active text-white" aria-current="page" href="../contact-us.html">Contact Us</a>
+            <a class="nav-link active text-white" aria-current="page" href="contact-us.html">Contact
+              Us</a>
           </li>
+
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <a href="../../francais/a-propos/a-propos.html" class="text-white">Français</a>
-        </form>
-      </div>
+          <a href="../francais/contactez-nous.html" class="text-white">Français</a>
+          </form>
+        </div>
     </div>
   </nav>
   <!-- Navbar Links -->
@@ -100,14 +122,14 @@ Team 4
 
     <!-- header and hero image -->
 
-    <header>
-        <h1 class="text-white">Blog</h1>
+    <header class= "visually-hidden">
+      <h1 class="text-white">Blog</h1>
     </header>
 
     <!-- Main -->
 
     <!-- encapsulates article sections and makes container responsive -->
-    <div class="container">
+    <div style="padding-top: 20px;" class="container">
       
       <!-- Article 1 -->
       <div class="article">
@@ -194,41 +216,6 @@ Team 4
       </div>
     </div>
   
-    <!-- Left Top Articles Aside -->
-    <aside class="left-top-articles-aside">
-      <h3>Top Articles</h3>
-      <ul style="list-style: none; padding: 0;">
-        <li><a href="#" style="text-decoration: none;">Syntactically Sassy Stylesheets</a></li>
-        <li><a href="#" style="text-decoration: none;">Byte off more than you can chew?</a></li>
-        <li><a href="#" style="text-decoration: none;">Complicated data relationships</a></li>
-        <li><a href="#" style="text-decoration: none;">Pixels make perfect</a></li>
-        <li><a href="#" style="text-decoration: none;">CSS for Kids!</a></li>
-        <li><a href="#" style="text-decoration: none;">Navigating Tech Today</a></li>
-      </ul>
-    </aside>
-
-    <!-- Right Archive Aside -->
-    <aside class="right-archive-aside">
-      <h3>Archived Articles</h3>
-      <ul style="list-style: none; padding: 0;">
-        <!-- 2024 archives -->
-        <li style="font-size: 0.9em;"><a href="#" style="text-decoration: none;">January 2024</a></li>
-        <li style="font-size: 0.9em;"><a href="#" style="text-decoration: none;">February 2024</a></li>
-      </ul>
-      <hr>
-      <h4>Past Years</h4>
-      <ul style="list-style: none; padding: 0;">
-        <!-- Archive for 2023 -->
-        <li style="font-size: 0.9em;"><a href="#" style="text-decoration: none;">Archive 2023</a></li>
-        <!-- Archive for 2022 -->
-        <li style="font-size: 0.9em;"><a href="#" style="text-decoration: none;">Archive 2022</a></li>
-        <!-- Archive for 2021 -->
-        <li style="font-size: 0.9em;"><a href="#" style="text-decoration: none;">Archive 2021</a></li>
-        <!-- Archive for 2020 -->
-        <li style="font-size: 0.9em;"><a href="#" style="text-decoration: none;">Archive 2020</a></li>
-      </ul>
-    </aside>
-
   <!-- Footer -->
   <footer class="footer bg-primary py-4 mt-5">
     <div class="container">
@@ -240,11 +227,11 @@ Team 4
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="../../../index-en.html">Home</a>
-              <a class="nav-link" href="../services/services.html">Services</a>
-              <a class="nav-link" href="../portfolio.html">Portfolio</a>
-              <a class="nav-link" href="../blog.html">Blog</a>
-              <a class="nav-link" href="about-us.html">About Us</a>
+              <a class="nav-link active text-white" aria-current="page" href="../../index-en.html">Home</a>
+              <a class="nav-link text-white" href="services/services.html">Services</a>
+              <a class="nav-link text-white" href="portfolio.html">Portfolio</a>
+              <a class="nav-link text-white" href="blog.html">Blog</a>
+              <a class="nav-link text-white" href="about-us/about-us.html">About Us</a>
             </div>
           </div>
         </div>
@@ -252,14 +239,14 @@ Team 4
 
       <div class="row justify-content-center mt-3">
         <div class="col-md-auto">
-          <a href="https://www.facebook.com/" target="_blank" class="text-white me-2"><img src="../../../images/facebook.svg"
-              alt="Facebook logo" class="social-icon"></a>
-          <a href="https://www.linkedin.com/" target="_blank" class="text-white me-2"><img src="../../../images/linkedin.svg"
-              alt="LinkedIn logo" class="social-icon"></a>
-          <a href="https://instagram.com/" target="_blank" class="text-white me-2"><img src="../../../images/instagram.svg"
-              alt="Instagram logo" class="social-icon"></a>
-          <a href="https://twitter.com/" target="_blank" class="text-white me-2"><img src="../../../images/twitter-x.svg"
-              alt="Twitter logo" class="social-icon"></a>
+          <a href="https://www.facebook.com/" target="_blank"><img src="../../images/facebook.svg"
+            alt="black and white Facebook logo" class="pr-4">&nbsp;</a>
+        <a href="https://www.linkedin.com/" target="_blank"><img src="../../images/linkedin.svg"
+            alt="black and white Facebook logo" class="pr-4">&nbsp;</a>
+        <a href="https://instagram.com/" target="_blank"><img src="../../images/instagram.svg"
+            alt="black and white Twitter logo" class="pr-4">&nbsp;</a>
+        <a href="https://twitter.com/" target="_blank"><img src="../../images/twitter-x.svg"
+            alt="black and white Twitter logo" class="pr-4">&nbsp;</a>
         </div>
       </div>
 
