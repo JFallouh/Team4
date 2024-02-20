@@ -43,6 +43,10 @@ justify-content: space-between;
 
 /* ---------------------------------------------------- */
 /* ---------------------- header ---------------------- */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
 header h1{
     text-align: center;
     font-family: serif,'Cambria', 'Cochin', Georgia, Times, 'Times New Roman';
