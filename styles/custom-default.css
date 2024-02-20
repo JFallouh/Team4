@@ -15,6 +15,11 @@ Team 4
 
     Purpose: This is the custom.css code.
 */
+/* ---------------------- nav bar ---------------------- */
+.nav-link{
+    border-radius: 5rem;
+
+}
 
 /* ---------------------- footer ---------------------- */
 .footer .container{
