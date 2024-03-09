@@ -32,7 +32,7 @@ Team 4
   <link rel="stylesheet" href="../../styles/custom.css">
 
   <!-- Custom SCSS -->
-  <link rel="stylesheet" href="styles/custom.css">
+  <!--<link rel="stylesheet" href="styles/custom.css">-->
 
   <title lang="en">Contact Us </title>
   <!--<title lang="en">Bootstrap Template</title>-->
@@ -42,23 +42,26 @@ Team 4
     crossorigin="anonymous"></script>
 
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-  <script src="../../Script/script.js" >
+  <script src="../../Script/script.js" defer>
 
   </script>
-<style>
-  div#warningBox {
-   color: red;
-   margin-top: 15px;
-  }
+  <style>
+    div#warningBox {
+      color: red;
+      margin-top: 15px;
+    }
 
-  #Message:focus,#Name:focus,#Phone:focus,#Email:focus {
-    background-color:rgba(234, 225, 218, 0.4);
-	color:#006;
-	border:1px solid rgb(255, 158, 47);
-	font-weight:bold;
-	box-shadow: 2px 2px 3px gold;
-  }
-</style>
+    #Message:focus,
+    #Name:focus,
+    #Phone:focus,
+    #Email:focus {
+      background-color: rgba(234, 225, 218, 0.4);
+      color: #006;
+      border: 1px solid rgb(255, 158, 47);
+      font-weight: bold;
+      box-shadow: 2px 2px 3px gold;
+    }
+  </style>
 
 </head>
 
@@ -67,11 +70,12 @@ Team 4
   <!-- bootstrap header / navigation bar -->
   <nav class="navbar navbar-expand-lg bg-primary bg-gradient text-white">
     <div class="container-fluid">
-      <img class="navbar-brand rounded rounded-4" alt="Awesome code crafter logo" src="../../Vista-Logos-Blue/logo-png.png" height="100" width="100">
+      <img class="navbar-brand rounded rounded-4" alt="Awesome code crafter logo"
+        src="../../Vista-Logos-Blue/logo-png.png" height="100" width="100">
       <!--  <a class="navbar-brand" href="#">Navbar</a>   -->
-      
-        <!--<button class="btn  btn-secondary " type="submit">Search</button>-->
-      
+
+      <!--<button class="btn  btn-secondary " type="submit">Search</button>-->
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -104,8 +108,7 @@ Team 4
           </li>
           <!-- portfolio-->
           <li class="nav-item">
-            <a class="nav-link active text-white" aria-current="page"
-              href="portfolio.html">Portfolio</a>
+            <a class="nav-link active text-white" aria-current="page" href="portfolio.html">Portfolio</a>
           </li>
           <!--Blog-->
           <li class="nav-item">
@@ -124,8 +127,8 @@ Team 4
               <li><a class="dropdown-item text-white" href="about-us/james-fallouh.html">James
                   Fallouh</a></li>
               <!-- <li><hr class="dropdown-divider"></li> -->
-              <li><a class="dropdown-item text-white"
-                  href="about-us/fatemeh-fekribaygi.html">SeyedehFatemeh Fekribaygi</a></li>
+              <li><a class="dropdown-item text-white" href="about-us/fatemeh-fekribaygi.html">SeyedehFatemeh
+                  Fekribaygi</a></li>
             </ul>
           </li>
           <!--Contact Us-->
@@ -136,9 +139,10 @@ Team 4
 
         </ul>
         <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <input id="NavSearch" name="NavSearch" class="form-control me-2" type="search" placeholder="Search"
+            aria-label="Search">
           <a href="../francais/contactez-nous.html" class="text-white">Français</a>
-          </form>
+        </form>
       </div>
     </div>
   </nav>
@@ -150,104 +154,108 @@ Team 4
   <header class="visually-hidden">
     <h1 class="text-white">Contact Us</h1>
   </header>
- <!-- main-->
- <main id="Contact-main" class="container">
- <div class="contact-main-container">
-  
-  <div class="row">
-    <div class="col-md-6">
-     <form action="../english/Contact-us-completed.html" method="post" autocomplete="on" onsubmit="return validateForm()">
+  <!-- main-->
+  <main id="Contact-main" class="container">
+    <div class="contact-main-container">
 
-      <div class="form-group">
-       <label for="Name">Name</label><span><sup>*</sup></span>
-       <input type="text" class="form-control" id="Name" name="name" placeholder="Your Name">
-      </div>
-
-      <div class="form-group">
-       <label for="Email">Email address</label><span><sup>*</sup></span>
-       <input type="email" class="form-control" id="Email"  placeholder="Your Email" required>
-      </div>
-
-      <div class="form-group">
-        <label for="Phone">Phone Number</label><span><sup>*</sup></span>
-        <!--<input type="tel" class="form-control" id="Phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">-->
-        <input type=tel class="form-control" id="Phone" name="phone"  placeholder="123-456-7890">
-      </div>
-
-      <div class="form-group">
-        <label for="Message">Message</label><span><sup>*</sup></span>
-        <textarea class="form-control" id="Message"  placeholder="Enter your message here" required></textarea>
-      </div>
-      <div id="countLabel">
-        Character Count: <span id="countValue">0</span> / <span id="limit">1000</span>
-     </div>
-     <div id="warningBox"></div>
-
-      <div class="col-md-2 mt-4 ">
-        <button type="submit" class="btn btn-primary mb-3">Submit</button>
-      </div>
-     </form>
-    </div>
-
-    <div class="col-md-2 col-lg-5 d-none d-md-block">
-      <img src="../../images/royalty-free/Contact.jpg" class="img-fluid contact-main-image-desktop" alt="email-icon-phone">
-    </div>
-    <div class="col-md-2 mt-4 d-md-none">
-      <img src="../../images/royalty-free/Contact.jpg" class="img-fluid contact-main-image" alt="email-icon-phone" >
-    </div>
-  </div> 
-</div>
-</main>
+      <div class="row">
+        <div class="col-md-6">
+          <form action="../english/Contact-us-completed.html" method="post" autocomplete="on"
+            onsubmit="return validateForm()">
 
 
- <!-- Footer -->
- <footer class="footer bg-primary py-4 mt-5">
-  <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-dark">
-      <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link active text-white" aria-current="page" href="../../index-en.html">Home</a>
-            <a class="nav-link text-white" href="services/services.html">Services</a>
-            <a class="nav-link text-white" href="portfolio.html">Portfolio</a>
-            <a class="nav-link text-white" href="blog.html">Blog</a>
-            <a class="nav-link text-white" href="about-us/about-us.html">About Us</a>
-          </div>
+
+            <div class="form-group">
+              <label for="Name">Name</label><span><sup>*</sup></span>
+              <input type="text" class="form-control" id="Name" name="name" placeholder="Your Name">
+            </div>
+
+            <div class="form-group">
+              <label for="Email">Email address</label><span><sup>*</sup></span>
+              <input type="email" class="form-control" id="Email" placeholder="Your Email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="Phone">Phone Number</label><span><sup>*</sup></span>
+              <!--<input type="tel" class="form-control" id="Phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">-->
+              <input type="tel" class="form-control" id="Phone" name="phone" placeholder="123-456-7890">
+            </div>
+
+            <div class="form-group">
+              <label for="Message">Message</label><span><sup>*</sup></span>
+              <textarea class="form-control" id="Message" placeholder="Enter your message here" required></textarea>
+            </div>
+            <div id="countLabel">
+              Character Count: <span id="countValue">0</span> / <span id="limit">1000</span>
+            </div>
+            <div id="warningBox"></div>
+
+            <div class="col-md-2 mt-4 ">
+              <button type="submit" class="btn btn-primary mb-3">Submit</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="col-md-2 col-lg-5 d-none d-md-block">
+          <img src="../../images/royalty-free/Contact.jpg" class="img-fluid contact-main-image-desktop"
+            alt="email-icon-phone">
+        </div>
+        <div class="col-md-2 mt-4 d-md-none">
+          <img src="../../images/royalty-free/Contact.jpg" class="img-fluid contact-main-image" alt="email-icon-phone">
         </div>
       </div>
-    </nav>
+    </div>
+  </main>
 
-    <div class="row justify-content-center mt-3">
-      <div class="col-md-auto">
-        <a href="https://www.facebook.com/" target="_blank"><img src="../../images/facebook.svg"
-          alt="black and white Facebook logo" class="pr-4">&nbsp;</a>
-      <a href="https://www.linkedin.com/" target="_blank"><img src="../../images/linkedin.svg"
-          alt="black and white Facebook logo" class="pr-4">&nbsp;</a>
-      <a href="https://instagram.com/" target="_blank"><img src="../../images/instagram.svg"
-          alt="black and white Twitter logo" class="pr-4">&nbsp;</a>
-      <a href="https://twitter.com/" target="_blank"><img src="../../images/twitter-x.svg"
-          alt="black and white Twitter logo" class="pr-4">&nbsp;</a>
+
+  <!-- Footer -->
+  <footer class="footer bg-primary py-4 mt-5">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active text-white" aria-current="page" href="../../index-en.html">Home</a>
+              <a class="nav-link text-white" href="services/services.html">Services</a>
+              <a class="nav-link text-white" href="portfolio.html">Portfolio</a>
+              <a class="nav-link text-white" href="blog.html">Blog</a>
+              <a class="nav-link text-white" href="about-us/about-us.html">About Us</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="row justify-content-center mt-3">
+        <div class="col-md-auto">
+          <a href="https://www.facebook.com/" target="_blank"><img src="../../images/facebook.svg"
+              alt="black and white Facebook logo" class="pr-4">&nbsp;</a>
+          <a href="https://www.linkedin.com/" target="_blank"><img src="../../images/linkedin.svg"
+              alt="black and white Facebook logo" class="pr-4">&nbsp;</a>
+          <a href="https://instagram.com/" target="_blank"><img src="../../images/instagram.svg"
+              alt="black and white Twitter logo" class="pr-4">&nbsp;</a>
+          <a href="https://twitter.com/" target="_blank"><img src="../../images/twitter-x.svg"
+              alt="black and white Twitter logo" class="pr-4">&nbsp;</a>
+        </div>
+      </div>
+
+      <div class="row justify-content-center mt-3">
+        <div class="col-md-auto text-white text-center">
+          <p>&copy; 2024 Awesome Code Crafter Hub. All rights reserved.</p>
+        </div>
       </div>
     </div>
-
-    <div class="row justify-content-center mt-3">
-      <div class="col-md-auto text-white text-center">
-        <p>&copy; 2024 Awesome Code Crafter Hub. All rights reserved.</p>
-      </div>
-    </div>
-  </div>
-</footer>
+  </footer>
 
 
 
 
-  
+
   <!-- this snippet enables the user to select the first dropdown item as a link -->
-  
+
   <!-- 
   <script>
     var servicesLink = document.querySelector('.nav-item.services-dropdown .dropdown-toggle'); /* selects the nav-link anchor element in the dropdown menu */

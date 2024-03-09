@@ -31,7 +31,7 @@ window.onload = function () {
 };*/
 $(document).ready(function () {
   // Check if there's a previous search term in local storage
-  var previousSearchTerm = localStorage.getItem('searchTerm');
+  let previousSearchTerm = localStorage.getItem('searchTerm');
   if (previousSearchTerm) {
     highlightText(previousSearchTerm);
   }
@@ -40,7 +40,7 @@ $(document).ready(function () {
   $('#NavSearch').on('keypress', function (event) {
     // Check if the Enter key was pressed (key code 13)
     if (event.which === 13) {
-      var searchText = $(this).val().trim();
+      let searchText = $(this).val().trim();
 
       // Highlight matching text (excluding HTML tags and attributes)
       highlightText(searchText);
@@ -66,9 +66,9 @@ $(document).ready(function () {
       $('body').find(':not(iframe, script, style, textarea)').contents().filter(function () {
         return this.nodeType === 3 && this.nodeValue.match(new RegExp('(' + searchText + ')', 'ig'));
       }).each(function () {
-        var content = this.nodeValue;
-        var regex = new RegExp('(' + searchText + ')', 'ig');
-        var highlightedContent = content.replace(regex, '<span class="highlight">$1</span>');
+        let content = this.nodeValue;
+        let regex = new RegExp('(' + searchText + ')', 'ig');
+        let highlightedContent = content.replace(regex, '<span class="highlight">$1</span>');
         $(this).replaceWith(highlightedContent);
       });
     }
@@ -128,8 +128,8 @@ function updateCount() {
 /*=================================================================*/
 // Function to count the number of characters in a text string
 function countCharacters(textStr) {
-  var commentregx = /\s/g;
-  var chars = textStr.replace(commentregx, "");
+  let commentregx = /\s/g;
+  let chars = textStr.replace(commentregx, "");
   return chars.length;
 }
 
