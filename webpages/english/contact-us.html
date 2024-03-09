@@ -36,8 +36,13 @@ Team 4
 
   <title lang="en">Contact Us </title>
   <!--<title lang="en">Bootstrap Template</title>-->
+  <!-- optional javascript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-  <script src="../../Script/script.js" defer>
+  <script src="../../Script/script.js" >
 
   </script>
 <style>
@@ -45,8 +50,6 @@ Team 4
    color: red;
    margin-top: 15px;
   }
-
-
 
   #Message:focus,#Name:focus,#Phone:focus,#Email:focus {
     background-color:rgba(234, 225, 218, 0.4);
@@ -87,6 +90,8 @@ Team 4
               Services
             </a>
             <ul class="dropdown-menu bg-primary bg-gradient text-white">
+              <li><a class="dropdown-item text-white" href="services/services.html">Services</a>
+              </li>
               <li><a class="dropdown-item text-white" href="services/programming.html">Programming</a>
               </li>
               <li><a class="dropdown-item text-white" href="services/web-development.html">Web
@@ -113,6 +118,7 @@ Team 4
               About Us
             </a>
             <ul class="dropdown-menu bg-primary bg-gradient ">
+              <li><a class="dropdown-item text-white" href="about-us/about-us.html">About Us</a></li>
               <li><a class="dropdown-item text-white" href="about-us/craig-collins.html">Craig
                   Collins</a></li>
               <li><a class="dropdown-item text-white" href="about-us/james-fallouh.html">James
@@ -153,23 +159,23 @@ Team 4
      <form action="../english/Contact-us-completed.html" method="post" autocomplete="on" onsubmit="return validateForm()">
 
       <div class="form-group">
-       <label for="Name">Name</label>
+       <label for="Name">Name</label><span><sup>*</sup></span>
        <input type="text" class="form-control" id="Name" name="name" placeholder="Your Name">
       </div>
 
       <div class="form-group">
-       <label for="Email">Email address</label>
+       <label for="Email">Email address</label><span><sup>*</sup></span>
        <input type="email" class="form-control" id="Email"  placeholder="Your Email" required>
       </div>
 
       <div class="form-group">
-        <label for="Phone">Phone Number</label>
+        <label for="Phone">Phone Number</label><span><sup>*</sup></span>
         <!--<input type="tel" class="form-control" id="Phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">-->
         <input type=tel class="form-control" id="Phone" name="phone"  placeholder="123-456-7890">
       </div>
 
       <div class="form-group">
-        <label for="Message">Message</label>
+        <label for="Message">Message</label><span><sup>*</sup></span>
         <textarea class="form-control" id="Message"  placeholder="Enter your message here" required></textarea>
       </div>
       <div id="countLabel">
@@ -237,15 +243,12 @@ Team 4
 </footer>
 
 
-<!-- Optional Javascript -->
 
 
-  <!-- optional javascript -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
+  
   <!-- this snippet enables the user to select the first dropdown item as a link -->
-  <!-- for services -->
+  
+  <!-- 
   <script>
     var servicesLink = document.querySelector('.nav-item.services-dropdown .dropdown-toggle'); /* selects the nav-link anchor element in the dropdown menu */
     servicesLink.addEventListener('click', function (event) { /* listens for the user to click */
@@ -254,14 +257,14 @@ Team 4
     });
   </script>
 
-  <!-- for about us -->
+  
   <script>
     var aboutUsLink = document.querySelector('.nav-item.about-us-dropdown .dropdown-toggle');
     aboutUsLink.addEventListener('click', function (event) {
       event.preventDefault();
       window.location.href = "webpages/english/about-us/about-us.html";
     });
-  </script>
+  </script> -->
 
 
 </body>

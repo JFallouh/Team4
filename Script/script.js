@@ -19,7 +19,7 @@ Team 4
 /*----------- Search input -----------*/
 // Event listener for page reload
 
-document.onload = function () {
+/*document.onload = function () {
   clearHighlight();
 };
 $(window).on('load', function () {
@@ -28,7 +28,7 @@ $(window).on('load', function () {
 // Event listener for page reload
 window.onload = function () {
   clearHighlight();
-};
+};*/
 $(document).ready(function () {
   // Check if there's a previous search term in local storage
   var previousSearchTerm = localStorage.getItem('searchTerm');
