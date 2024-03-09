@@ -36,8 +36,26 @@ Team 4
 
   <title lang="en">Contact Us </title>
   <!--<title lang="en">Bootstrap Template</title>-->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="../../Script/script.js" defer>
+
+  </script>
+<style>
+  div#warningBox {
+   color: red;
+   margin-top: 15px;
+  }
 
 
+
+  #Message:focus,#Name:focus,#Phone:focus,#Email:focus {
+    background-color:rgba(234, 225, 218, 0.4);
+	color:#006;
+	border:1px solid rgb(255, 158, 47);
+	font-weight:bold;
+	box-shadow: 2px 2px 3px gold;
+  }
+</style>
 
 </head>
 
@@ -132,7 +150,7 @@ Team 4
   
   <div class="row">
     <div class="col-md-6">
-     <form action="../english/Contact-us-completed.html" method="post" autocomplete="on">
+     <form action="../english/Contact-us-completed.html" method="post" autocomplete="on" onsubmit="return validateForm()">
 
       <div class="form-group">
        <label for="Name">Name</label>
@@ -146,13 +164,18 @@ Team 4
 
       <div class="form-group">
         <label for="Phone">Phone Number</label>
-        <input type="tel" class="form-control" id="Phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+        <!--<input type="tel" class="form-control" id="Phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">-->
+        <input type=tel class="form-control" id="Phone" name="phone"  placeholder="123-456-7890">
       </div>
 
       <div class="form-group">
         <label for="Message">Message</label>
         <textarea class="form-control" id="Message"  placeholder="Enter your message here" required></textarea>
       </div>
+      <div id="countLabel">
+        Character Count: <span id="countValue">0</span> / <span id="limit">1000</span>
+     </div>
+     <div id="warningBox"></div>
 
       <div class="col-md-2 mt-4 ">
         <button type="submit" class="btn btn-primary mb-3">Submit</button>
