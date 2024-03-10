@@ -59,11 +59,12 @@ $(document).ready(function () {
 
   function highlightText(searchText) {
     // Remove existing highlights
-    $('body').find('.highlight').contents().unwrap();
-
+    $('main').find('.highlight').contents().unwrap();
+    // replace main with body to search the entire document
     // Highlight matching text (excluding HTML tags and attributes)
     if (searchText !== '') {
-      $('body').find(':not(iframe, script, style, textarea)').contents().filter(function () {
+      // replace main with body to search the entire document
+      $('main').find(':not(iframe, script, style, textarea)').contents().filter(function () {
         return this.nodeType === 3 && this.nodeValue.match(new RegExp('(' + searchText + ')', 'ig'));
       }).each(function () {
         let content = this.nodeValue;
@@ -76,7 +77,8 @@ $(document).ready(function () {
 
   function clearHighlight() {
     // Remove existing highlights
-    $('body').find('.highlight').contents().unwrap();
+    // replace main with body to clear search from the entire document
+    $('main').find('.highlight').contents().unwrap();
     // Clear the search term in local storage
     localStorage.removeItem(`searchTerm`);
   }
@@ -140,11 +142,14 @@ let Name;
 let Email;
 let Phone;
 let Message;
+let SelectService;
+
 function validateForm() {
   Name = document.getElementById("Name");
   Email = document.getElementById("Email");
   Phone = document.getElementById("Phone");
   Message = document.getElementById("Message");
+  SelectService = document.getElementById("Select_Service");
 
   // Validate the form data
   if (!isValidName(Name.value)) {
@@ -168,7 +173,14 @@ function validateForm() {
     Phone.focus();
     return false; // Stop form submission
   }
+    // Check if the default option is selected
+    if (SelectService.value === "") {
+      alert("Please select a service.");
+      SelectService.focus();
+      return false; // Stop form submission
+    }
 
+  // validate the text 
   if (Message.value.trim() === "") {
     alert("Please enter your message ");
     Message.focus();
@@ -218,5 +230,21 @@ function isValidName(name) {
   const namePattern = /^[A-Za-z\s]+$/;
   
   return namePattern.test(name);
+}
+
+function resetForm() {
+  // Reset the form
+  document.getElementById("Name").value = "";
+  document.getElementById("Email").value = "";
+  document.getElementById("Phone").value = "";
+  document.getElementById("Select_Service").value = "";
+  document.getElementById("Message").value = "";
+
+  // Call the updateCount function to reset character count
+  updateCount();
+
+  // You can add additional reset logic if needed
+  // For example, clear the local storage for the search term
+  localStorage.removeItem('searchTerm');
 }
 /*----------- End of form validation -----------*/
