@@ -32,13 +32,54 @@ Team 4
   <!-- CSS -->
   <link rel="stylesheet" href="../../styles/custom.css">
   <link rel="stylesheet" href="../../styles/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 
   <title lang="en">Awesome Code Crafters Hub - Blog </title>
   <style>
     .dropdown:hover .dropdown-menu {
       display: block;
     }
+
+    .counter {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: #1F78FC; 
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    .like-button, .dislike-button {
+  border: none;
+  background-color: transparent; 
+  cursor: pointer;
+  border-radius: 50%; 
+  padding: 10px; 
+  display: inline-flex; 
+  align-items: center;
+  justify-content: center;
+}
+
+.like-button i, .dislike-button i {
+  font-size: 20px;
+}
+
+.like-button {
+  color: #4CAF50; 
+}
+
+.dislike-button {
+  color: #F44336; 
+}
+
+.like-button:hover, .dislike-button:hover {
+  opacity: 0.7;
+}
   </style>
+
+  <script src="../../Script/script.js" defer></script>
 </head>
 
 <body>
@@ -133,12 +174,20 @@ Team 4
               <img src="../../images/generated/syntactically-sassy-stylesheets.png" alt="Sassy Stylesheets" title="Syntactically Sassy Stylesheets">
               <div class="overlay">
                 <h2>Syntactically Sassy Stylesheets</h2>
+              
               </div>
             </div>
           </a>
+          <div class="counter">
+            <span class="likes">0</span> Likes
+            <button class="like-button"><i class="fa fa-thumbs-up"></i></button>
+            |
+            <span class="dislikes">0</span> Dislikes
+            <button class="dislike-button"><i class="fa fa-thumbs-down"></i></button>
+          </div>
         </div>
       </div>
-    
+        
       <!-- Article 2 -->
       <div class="article">
         <div class="content">
@@ -150,6 +199,13 @@ Team 4
               </div>
             </div>
           </a>
+          <div class="counter">
+            <span class="likes">0</span> Likes
+            <button class="like-button"><i class="fa fa-thumbs-up"></i></button>
+            |
+            <span class="dislikes">0</span> Dislikes
+            <button class="dislike-button"><i class="fa fa-thumbs-down"></i></button>
+          </div>
         </div>
       </div>
     
@@ -164,6 +220,13 @@ Team 4
               </div>
             </div>
           </a>
+          <div class="counter">
+            <span class="likes">0</span> Likes
+            <button class="like-button"><i class="fa fa-thumbs-up"></i></button>
+            |
+            <span class="dislikes">0</span> Dislikes
+            <button class="dislike-button"><i class="fa fa-thumbs-down"></i></button>
+          </div>
         </div>
       </div>
     
@@ -178,6 +241,13 @@ Team 4
               </div>
             </div>
           </a>
+          <div class="counter">
+            <span class="likes">0</span> Likes
+            <button class="like-button"><i class="fa fa-thumbs-up"></i></button>
+            |
+            <span class="dislikes">0</span> Dislikes
+            <button class="dislike-button"><i class="fa fa-thumbs-down"></i></button>
+          </div>
         </div>
       </div>
     
@@ -192,6 +262,13 @@ Team 4
               </div>
             </div>
           </a>
+          <div class="counter">
+            <span class="likes">0</span> Likes
+            <button class="like-button"><i class="fa fa-thumbs-up"></i></button>
+            |
+            <span class="dislikes">0</span> Dislikes
+            <button class="dislike-button"><i class="fa fa-thumbs-down"></i></button>
+          </div>
         </div>
       </div>
     
@@ -206,6 +283,13 @@ Team 4
               </div>
             </div>
           </a>
+          <div class="counter">
+            <span class="likes">0</span> Likes
+            <button class="like-button"><i class="fa fa-thumbs-up"></i></button>
+            |
+            <span class="dislikes">0</span> Dislikes
+            <button class="dislike-button"><i class="fa fa-thumbs-down"></i></button>
+          </div>
         </div>
       </div>
     </div>
