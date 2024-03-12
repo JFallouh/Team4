@@ -34,14 +34,47 @@ Team 4
   <!-- CSS -->
   <link rel="stylesheet" href="../../../styles/custom.css">
   <link rel="stylesheet" href="../../../styles/main.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    #project-list {
+      list-style: none; 
+      padding-left: 0;
+    }
+    #project-list li {
+      border: 1px solid #dee2e6;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #f8f9fa;
+      transition: background-color 0.3s;
+    }
+    #project-list li:hover {
+      background-color: #e9ecef;
+    }
+    #project-list li a {
+      text-decoration: none;
+      color: #007bff;
+    }
+    #project-list li a:hover {
+      color: #0056b3;
+    }
+    #project-list li strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+    .github-icon {
+      width: 20px;
+      margin-right: 5px;
+      vertical-align: -5px;
+    }
+  </style>
 
 
   <title lang="en">Craig Collins</title>
   <!--<title lang="en">Bootstrap Template</title>-->
 
 
-
+  <script src="../../../Script/script-3.js" defer></script>
 </head>
 
 <body>
@@ -237,6 +270,12 @@ Team 4
   </div>
 </div>
 
+<!-- GitHub Section -->
+<section class="container mt-5">
+  <ul id="project-list" class="list-unstyled">
+      <!-- projects will appear here -->
+  </ul>
+</section>
 
 <!-- Footer -->
 <footer class="footer bg-primary py-4 mt-5">
@@ -285,6 +324,8 @@ Team 4
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
+
+
 </body>
 
 </html>
