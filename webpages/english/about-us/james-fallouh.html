@@ -39,7 +39,35 @@ Team 4
 
   <title lang="en">James Fallouh</title>
   <!--<title lang="en">Bootstrap Template</title>-->
-    
+  <style>
+    #project-list {
+      list-style: none; 
+      padding-left: 0;
+    }
+    #project-list li {
+      border: 1px solid #dee2e6;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #f8f9fa;
+      transition: background-color 0.5s;
+    }
+    #project-list li:hover {
+      background-color: #e9ecef;
+    }
+    #project-list li a {
+      text-decoration: none;
+      color: #007bff;
+    }
+    #project-list li a:hover {
+      color: #0056b3;
+    }
+    #project-list li strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+  </style>
+  <script src="../../../Script/script-3.js" defer></script>
 </head>
 
 <body>
@@ -234,6 +262,19 @@ Team 4
     </div>
   </div>
 </div>
+
+<!-- Main Header -->
+<section class="main-header bg-primary bg-gradient">
+  <h2 class="text-white">GitHub Repositories</h2>
+</section>
+
+
+<!-- GitHub Section -->
+<section class="container mt-5">
+  <ul id="project-list" class="list-unstyled">
+      <!-- repos appear here -->
+  </ul>
+</section>
 
 
 <!-- Footer -->

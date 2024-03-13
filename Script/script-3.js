@@ -1,5 +1,5 @@
     /********** Case Study 5 **********/
-    
+    "use strict";
     // declares and instantiates XMLHttpRequest object
     let xhr = new XMLHttpRequest();
 
