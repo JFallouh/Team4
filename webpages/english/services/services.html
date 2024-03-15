@@ -221,22 +221,25 @@ Team 4
     <h2>Get A Price Quote</h2>
     <form id="quoteForm" action="#">
       <div class="mb-3">
-        <label for="serviceType" class="form-label"> Type of Services</label>
-        <select class="form-select" id="serviceType" required>
-          <option value=""> Select Services</option>
-          <option value="Database"> Database (25$/Hour)</option>
-          <option value="programming"> programming (25$/Hour)</option>
-          <option value="website-design"> website-design (35$/Hour)</option>
-          <option value="web-development"> web-development (35$/Hour)</option>
-        </select>
+        <label for="Databases" class="form-label">Database (25$/hour)</label>
+        <input type="number"  class="form-control num" id="Databases" name="Databases" value="0" required>
       </div>
       <div class="mb-3">
-        <label for="estimateHours" class="form-label"> Estimated Hours of Project </label>
-        <input type="number" class="form-control" id="estimateHours" required>
-        <div id="hoursError"  class="text-danger d-none"> Please hours more than 1.</div>
+        <label for="Programming" class="form-label">Programming (35$/hour)</label>
+        <input type="number"  class="form-control num" id="Programming" name="Programming" value="0" required>
       </div>
-      <button type="submit" class="btn btn-primary"> Get an Estimate</button>
+      <div class="mb-3">
+        <label for="Webdesign" class="form-label">Website design (45$/hour)</label>
+        <input type="number"  class="form-control num" id="Webdesign" name="Webdesign" value="0" required>
+      </div>
+      <div class="mb-3">
+        <label for="webdev" class="form-label">Web Development (35$/hour)</label>
+        <input type="number"  class="form-control num" id="webdev" name="webdev" value="0" required>
+      </div>
+      <P ID="note1">You can enter 0 when there are no hours for a particular services.</P>
+       <button type="submit" class="btn btn-primary"> Get an Estimate</button>
     </form>
+  
 
     <!--Table to show the quoate-->
     <div id="quoteTable" class="mt-3 d-none">
@@ -252,6 +255,12 @@ Team 4
         <tbody id="quoteTableBody">
 
         </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2" class="text-end">Total:</td>
+            <td id="total">0$</td>
+          </tr>
+        </tfoot>
       </table>
       <p class="note"> Please note that Prices are subject to change once we recieve more details about your project. You can <a href="../contact-us.html">contact us</a> for more details.</p>
     </div>

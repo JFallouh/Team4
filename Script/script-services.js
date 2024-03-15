@@ -17,46 +17,57 @@ Team 4
 document.getElementById('quoteForm').addEventListener('submit', function(event){
     event.preventDefault();
 
-    //get form data
-    var serviceType = document.getElementById('serviceType').value;
-    var estimateHours = parseInt(document.getElementById('estimateHours').value);
-
-
-    //validate estimate  hours to be more than 0 and a non negative number
-    if (estimateHours <= 0 || isNaN(estimateHours)){
-        document.getElementById('hoursError').classList.remove('d-none');
-        return;
-    }
-    document.getElementById ('hoursError').classList.add('d-none');
-
-    //set the prices 
-
-    var basePrice;
-    switch (serviceType){
-        case 'Database':
-        case 'programming':
-            basePrice = 25;
-            break;
-            case 'website-design':
-            case 'web-development':
-                basePrice = 35;
-                break;
-                
-
-    }
-
-
-    //CALCULATE THE ESTIMATED QUOTE
-    var estimatedQuote = basePrice * estimateHours;
-
-    //display the quote in a table
-    var quoteTableBody = document.getElementById('quoteTableBody')
-    quoteTableBody.innerHTML = ` <tr>
-                                  <td>${serviceType}</td>
-                                  <td>${estimateHours}</td>
-                                  <td>$${estimatedQuote}</td>
-                                </tr>`;
+    //get the hours for service
+    var databasesHours = parseFloat(document.getElementById('Databases').value);
+    var programmingHours = parseFloat(document.getElementById('Programming').value);
+    var webdesignHours = parseFloat(document.getElementById('Webdesign').value);
+    var webdevHours = parseFloat(document.getElementById('webdev').value);
     
+    //validate if input negative
+    
+    
+    // calculate estimated quote for each service
+    var databasesQuote = databasesHours * 25;
+    var programmingQuote = programmingHours * 35;
+    var webdesignQuote = webdesignHours * 45;
+    var webdevQuote = webdevHours * 35;
+
+    //Calculated total
+    var totalQuote = databasesQuote + programmingQuote + webdesignQuote +webdevQuote;
+
+    //display the quote in the table
+    var quoteTableBody = document.getElementById("quoteTableBody");
+    quoteTableBody.innerHTML = `
+      <tr>
+       <td>Datebase</td>
+       <td>${databasesHours}</td>
+       <td>${databasesQuote}</td>
+      </tr>
+
+      <tr>
+       <td>Programming</td>
+       <td>${programmingHours}</td>
+       <td>${programmingQuote}</td>
+      </tr>
+
+      <tr>
+       <td>Webdesign</td>
+       <td>${webdesignHours}</td>
+       <td>${webdesignQuote}</td>
+      </tr>
+
+      <tr>
+       <td>webdev</td>
+       <td>${webdevHours}</td>
+       <td>${webdevQuote}</td>
+      </tr>
+    
+    `;
+
+    //display total
+    document.getElementById("total").innerText = `$${totalQuote}`;
+
+
     // show the quote table
     document.getElementById('quoteTable').classList.remove('d-none');
 });
