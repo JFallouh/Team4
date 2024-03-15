@@ -49,8 +49,61 @@ Team 4
     div#warningBox {
       color: red;
       margin-top: 15px;
+
+
+    }
+    button{
+      width: 5rem;
+      height: 3rem;
+      font-family: serif;
+      font-weight:bold;
     }
 
+    label {
+     
+      font-family:serif;
+      font-weight: bold;
+      margin: 0.4rem 0.4rem 0.1rem 0.4rem;
+    }
+
+    #contact_us_image {
+      min-height: 20rem;
+      min-width: 20rem;
+    }
+
+    .form-group {
+      display: inline-block;
+    }
+
+    .selected-services-container {
+
+      border: 1px solid #ccc;
+
+      border-radius: 5px;
+
+    }
+
+    #Select_Service_div {
+      display: flex;
+
+    }
+
+    .selected-services-container h2 {
+
+      color: #333;
+    }
+
+    .selected-services-container ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+
+
+    .highlightList {
+      background-color: #b3d7ff;
+    }
+    #Select_Service:focus,
     #Message:focus,
     #Name:focus,
     #Phone:focus,
@@ -155,46 +208,83 @@ Team 4
     <h1 class="text-white">Contact Us</h1>
   </header>
   <!-- main-->
-  <main id="Contact-main" class="container">
-    <div class="contact-main-container">
+  <main id="Contact-main" class="container" style="display:flex; flex-direction: row; gap:10rem;">
+    <div class="contact-main-container ">
 
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6" style="display: flex; flex-direction: column; justify-content: center;">
           <form action="../english/Contact-us-completed.html" method="post" autocomplete="on"
             onsubmit="return validateForm()">
-
+            
 
 
             <div class="form-group">
               <label for="Name">Name</label><span><sup>*</sup></span>
-              <input type="text" class="form-control" id="Name" name="name" placeholder="Your Name">
+              <input type="text" class="form-control" id="Name" name="name" placeholder="Your Name" size="30">
             </div>
-
+              <br>
             <div class="form-group">
               <label for="Email">Email address</label><span><sup>*</sup></span>
-              <input type="email" class="form-control" id="Email" placeholder="Your Email" required>
+              <input type="email" class="form-control" id="Email" placeholder="Your Email" required size="30">
             </div>
-
+            <br>
             <div class="form-group">
               <label for="Phone">Phone Number</label><span><sup>*</sup></span>
               <!--<input type="tel" class="form-control" id="Phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">-->
-              <input type="tel" class="form-control" id="Phone" name="phone" placeholder="123-456-7890">
+              <input type="tel" class="form-control" id="Phone" name="phone" placeholder="123-456-7890" size="30">
             </div>
-            
-            <div class="form-group">
-              <label for="Select_Service">Select Service</label><span><sup>*</sup></span>
-              <select id="Select_Service" name="service">
-                <option value="" disabled selected>Select Service</option>
-                <option value="1_Programming">Programming</option>
-                <option value="2_Web design">Web design</option>
-                <option value="3_Database">Database</option>
-                <option value="4_Other">Other</option>
-              </select>
+            <br>
+            <div id="Select_Service_div" class="form-group " onchange="createSelectedServicesElements()">
+              <section>
+                <h6 style="display: none;">header</h6>
+                <label for="Select_Service">Select Service</label><span><sup>*</sup></span><br>
+                <select id="Select_Service" name="service" size="6" multiple="multiple">
+                  <option value="" disabled selected>Select Service</option>
+                  <option id="programming" value="Programming">Programming</option>
+                  <option id="webDesign" value="Web design">Web design</option>
+                  <option id="database" value="Database">Database</option>
+                  <option id="webDevelopment" value="Web development">Web Development</option>
+                  <option value="Other">Other</option>
+                </select>
+              </section>
+              <!--
+              <section class="selected-services-img-sec">
+                <h6 style="display: none;">header</h6>
+                <img style="margin: 2rem 0 0 1rem; transform: rotate(270deg);" src="../../images/arrow_down.gif" alt="arrow to the right"
+                  title="arrow to the right" height="100rem" width="100rem">
+              </section>
+
+              <section class="selected-services-container "
+                style=" width:35rem; height:8.5rem; margin: 1.3rem; padding: 0;">
+
+
+                <h2 class="bg-primary bg-gradient text-center" style="color:white; font-size:smaller; display: block; margin: 0; padding: 0;">
+                  Selected Services</h2>
+                <ul id="selected-services-list" style="font-family: serif; margin: 0; padding: 0;"></ul>
+              </section>-->
             </div>
+
+
+
+            <!--<div class="form-group">
+              <label>Select Service: </label>
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="checkbox" id="programming" value="Programming">
+              <label for="programming">&nbsp;Programming</label>
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="checkbox" id="webDesign" value="Web_design">
+              <label for="webDesign">&nbsp;Web Design</label>
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="checkbox" id="database" value="Database">
+              <label for="database">&nbsp;Database</label>
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="checkbox" id="webDevelopment" value="Web_development">
+              <label for="webDevelopment">&nbsp;Programming</label>
+            </div>-->
 
             <div class="form-group">
               <label for="Message">Message</label><span><sup>*</sup></span>
-              <textarea class="form-control" id="Message" placeholder="Enter your message here" required></textarea>
+              <textarea class="form-control"  id="Message" placeholder="Enter your message here" required rows="5" cols="100"></textarea>
             </div>
             <div id="countLabel">
               Character Count: <span id="countValue">0</span> / <span id="limit">1000</span>
@@ -205,28 +295,28 @@ Team 4
               <button type="submit" id="submit_request" class="btn btn-primary mb-3" value="Submit request">Submit</button>
               <button type="reset" id="reset_request" class="btn btn-primary mb-3" value="Reset request">Reset</button>
             </div>-->
-            <div class="col-md-12 mt-4">
-              <div class="row">
-                <div class="col-md-6 mb-3">
-                  <button type="submit" id="submit_request" class="btn btn-primary btn-block" value="Submit request">Submit</button>
-                </div>
-                <div class="col-md-6">
-                  <button type="button" id="reset_request" class="btn btn-secondary btn-block" value="Reset request" onclick="resetForm()">Reset</button>
-                </div>
-              </div>
+
+            <div style="display: flex; justify-content: center;">
+
+              <button type="submit" id="submit_request" class="btn btn-primary btn-block"
+                value="Submit request" onclick="handleSubmit();">Submit</button>
+
+              <button type="button" id="reset_request" class="btn btn-secondary btn-block" value="Reset request"
+                onclick="resetForm()">Reset</button>
+
+
             </div>
           </form>
         </div>
 
         <div class="col-md-2 col-lg-5 d-none d-md-block">
-          <img src="../../images/royalty-free/Contact.jpg" class="img-fluid contact-main-image-desktop"
-            alt="email-icon-phone">
+          <img style="margin: 1rem;" id="contact_us_image" src="../../images/Email_Marketing.gif"
+            class="img-fluid contact-main-image-desktop" alt="email-icon-phone">
         </div>
-        <div class="col-md-2 mt-4 d-md-none">
-          <img src="../../images/royalty-free/Contact.jpg" class="img-fluid contact-main-image" alt="email-icon-phone">
-        </div>
+
       </div>
     </div>
+
   </main>
 
 

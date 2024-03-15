@@ -31,13 +31,48 @@ Team 4
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../../styles/custom.css">
 
-  <!-- Custom SCSS -->
-  <link rel="stylesheet" href="styles/main.css">
+  <!-- Custom SCSS 
+  <link rel="stylesheet" href="styles/main.css">-->
 
-  <title lang="en">Contact Us completed </title>
+  <title lang="en">Survey </title>
   <!--<title lang="en">Bootstrap Template</title>-->
+  <!-- Optional Javascript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
 
 
+  <script>
+    'use strict';
+    window.addEventListener('load', () => {
+      // via query parameters - get 
+      const params = (new URL(document.location)).searchParams;
+      const nameOfClient = params.get('nameOfClient');
+      // via local storage 
+      const storedName = localStorage.getItem('Name');
+      const nameToShow = nameOfClient || storedName || "Unknown"; // Handle case when name is not provided
+      document.getElementById('result-name').innerHTML = nameToShow;
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const redirectButton = document.getElementById('redirectButton');
+
+      redirectButton.addEventListener('click', function () {
+        // Redirect to another page
+        window.location.href = "Survey.html"
+      });
+    });
+
+
+  </script>
+  <style>
+    button {
+      width: 5rem;
+      height: 3rem;
+      font-family: serif;
+      font-size: bold;
+    }
+  </style>
 </head>
 
 <body>
@@ -45,11 +80,12 @@ Team 4
   <!-- bootstrap header / navigation bar -->
   <nav class="navbar navbar-expand-lg bg-primary bg-gradient text-white">
     <div class="container-fluid ">
-      <img class="navbar-brand " alt="Awesome code crafter logo" src="../../Vista-Logos-Blue/logo-png.png" height="100" width="100">
+      <img class="navbar-brand " alt="Awesome code crafter logo" src="../../Vista-Logos-Blue/logo-png.png" height="100"
+        width="100">
       <!--  <a class="navbar-brand" href="#">Navbar</a>   -->
-      
-        <!--<button class="btn  btn-secondary " type="submit">Search</button>-->
-      
+
+      <!--<button class="btn  btn-secondary " type="submit">Search</button>-->
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -80,8 +116,7 @@ Team 4
           </li>
           <!-- portfolio-->
           <li class="nav-item">
-            <a class="nav-link active text-white" aria-current="page"
-              href="portfolio.html">Portfolio</a>
+            <a class="nav-link active text-white" aria-current="page" href="portfolio.html">Portfolio</a>
           </li>
           <!--Blog-->
           <li class="nav-item">
@@ -99,8 +134,8 @@ Team 4
               <li><a class="dropdown-item text-white" href="about-us/james-fallouh.html">James
                   Fallouh</a></li>
               <!-- <li><hr class="dropdown-divider"></li> -->
-              <li><a class="dropdown-item text-white"
-                  href="about-us/fatemeh-fekribaygi.html">SeyedehFatemeh Fekribaygi</a></li>
+              <li><a class="dropdown-item text-white" href="about-us/fatemeh-fekribaygi.html">SeyedehFatemeh
+                  Fekribaygi</a></li>
             </ul>
           </li>
           <!--Contact Us-->
@@ -113,8 +148,8 @@ Team 4
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <a href="../francais/contactez-nous.html" class="text-white">Français</a>
-          </form>
-        </div>
+        </form>
+      </div>
     </div>
   </nav>
   <!-- navbar links -->
@@ -122,66 +157,68 @@ Team 4
   <!-- bootstrap jumbotron -->
 
   <!-- header and hero image -->
-  <header>
+  <header class=visually-hidden>
     <h1 class="text-white">Contact Us</h1>
   </header>
 
- <!-- main-->
- <main id="Contact-completed-main" class="d-flex justify-content-center align-items-center">
-  <div class="contact-completed-main-container text-center">
-      <h2 style="margin-top: 20px; margin-bottom: 10px;">Thank you for reaching out to us</h2>
+  <!-- main-->
+  <main id="Contact-completed-main" class="d-flex justify-content-center align-items-center">
+    <div class="contact-completed-main-container text-center">
+      <h2 style="margin-top: 20px; margin-bottom: 10px;">Thank you <span id="result-name"></span> for reaching out to us
+      </h2>
       <img src="../../animations/email-sent.gif" alt="Email Sent GIF" style="max-width: 50%; height: auto;">
       <h2 style="margin-top: 10px; margin-bottom: 20px;">We will contact you as soon as possible</h2>
-  </div>
-</main>
+      <h2 style="margin-top: 10px; margin-bottom: 20px;">Would you like to participate in our survey?</h2>
+      <div style="display:flex; justify-content:center; row-gap:0.1rem;">
+        <button type="button" id="redirectButton" class="btn btn-primary btn-block " value="Submit request">Yes</button>
+        <button type="button" id="no_button" class="btn btn-secondary btn-block " value="Submit request">No</button>
+      </div>
 
- <!-- Footer -->
- <footer class="footer bg-primary py-4 mt-5">
-  <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-dark">
-      <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link active text-white" aria-current="page" href="../../index-en.html">Home</a>
-            <a class="nav-link text-white" href="services/services.html">Services</a>
-            <a class="nav-link text-white" href="portfolio.html">Portfolio</a>
-            <a class="nav-link text-white" href="blog.html">Blog</a>
-            <a class="nav-link text-white" href="about-us/about-us.html">About Us</a>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer bg-primary py-4 mt-5">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active text-white" aria-current="page" href="../../index-en.html">Home</a>
+              <a class="nav-link text-white" href="services/services.html">Services</a>
+              <a class="nav-link text-white" href="portfolio.html">Portfolio</a>
+              <a class="nav-link text-white" href="blog.html">Blog</a>
+              <a class="nav-link text-white" href="about-us/about-us.html">About Us</a>
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
 
-    <div class="row justify-content-center mt-3">
-      <div class="col-md-auto">
-        <a href="https://www.facebook.com/" target="_blank"><img src="../../images/facebook.svg"
-          alt="black and white Facebook logo" class="pr-4">&nbsp;</a>
-      <a href="https://www.linkedin.com/" target="_blank"><img src="../../images/linkedin.svg"
-          alt="black and white Facebook logo" class="pr-4">&nbsp;</a>
-      <a href="https://instagram.com/" target="_blank"><img src="../../images/instagram.svg"
-          alt="black and white Twitter logo" class="pr-4">&nbsp;</a>
-      <a href="https://twitter.com/" target="_blank"><img src="../../images/twitter-x.svg"
-          alt="black and white Twitter logo" class="pr-4">&nbsp;</a>
+      <div class="row justify-content-center mt-3">
+        <div class="col-md-auto">
+          <a href="https://www.facebook.com/" target="_blank"><img src="../../images/facebook.svg"
+              alt="black and white Facebook logo" class="pr-4">&nbsp;</a>
+          <a href="https://www.linkedin.com/" target="_blank"><img src="../../images/linkedin.svg"
+              alt="black and white Facebook logo" class="pr-4">&nbsp;</a>
+          <a href="https://instagram.com/" target="_blank"><img src="../../images/instagram.svg"
+              alt="black and white Twitter logo" class="pr-4">&nbsp;</a>
+          <a href="https://twitter.com/" target="_blank"><img src="../../images/twitter-x.svg"
+              alt="black and white Twitter logo" class="pr-4">&nbsp;</a>
+        </div>
+      </div>
+
+      <div class="row justify-content-center mt-3">
+        <div class="col-md-auto text-white text-center">
+          <p>&copy; 2024 Awesome Code Crafter Hub. All rights reserved.</p>
+        </div>
       </div>
     </div>
-
-    <div class="row justify-content-center mt-3">
-      <div class="col-md-auto text-white text-center">
-        <p>&copy; 2024 Awesome Code Crafter Hub. All rights reserved.</p>
-      </div>
-    </div>
-  </div>
-</footer>
+  </footer>
 
 
-<!-- Optional Javascript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-  crossorigin="anonymous"></script>
-</body>
+
 
 </html>

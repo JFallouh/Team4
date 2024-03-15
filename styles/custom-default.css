@@ -90,9 +90,15 @@ main p {
     /*body img:active{
         filter: saturate(5);
     }*/
+    img {
+        /* Apply transition for smooth scaling */
+        /*transition: transform 3s ease;*/
+        /* Apply transition for smooth scaling and drop shadow */
+    transition: transform 4s ease, filter 4s ease;
 
+    }
     img:hover {
-        transform: scale(1.07, 1.07);
+        transform: scale(1.02, 1.02);
         filter: drop-shadow(7px 7px 0 #999);
     }
 
