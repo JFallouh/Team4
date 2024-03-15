@@ -53,13 +53,13 @@ document.getElementById('quoteForm').addEventListener('submit', function(event){
       </tr>
 
       <tr>
-       <td>Webdesign</td>
+       <td>Website design</td>
        <td>${webdesignHours}</td>
        <td>${webdesignQuote}</td>
       </tr>
 
       <tr>
-       <td>webdev</td>
+       <td>Website development</td>
        <td>${webdevHours}</td>
        <td>${webdevQuote}</td>
       </tr>
