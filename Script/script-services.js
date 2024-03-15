@@ -24,8 +24,10 @@ document.getElementById('quoteForm').addEventListener('submit', function(event){
     var webdevHours = parseFloat(document.getElementById('webdev').value);
     
     //validate if input negative
-    
-    
+    if(databasesHours <0 || programmingHours <0 || webdesignHours <0 || webdevHours <0 ) {
+        alert("Invalid Input. You must enter 0 or a positive number");
+        return;
+    }
     // calculate estimated quote for each service
     var databasesQuote = databasesHours * 25;
     var programmingQuote = programmingHours * 35;
